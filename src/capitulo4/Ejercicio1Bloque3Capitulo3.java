@@ -16,7 +16,7 @@ public class Ejercicio1Bloque3Capitulo3 {
 				else { 
 					if (num == 0){
 					System.out.println("La suma es " + acumuladorSuma);
-						
+					return;	
 				}
 				}
 			}

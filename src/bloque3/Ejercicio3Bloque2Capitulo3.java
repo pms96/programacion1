@@ -16,6 +16,7 @@ public class Ejercicio3Bloque2Capitulo3 {
 			
 			if (resultado >=100) {
 				System.out.println("Fin");
+				return;
 			}
 		}
 	}

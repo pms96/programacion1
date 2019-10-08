@@ -21,6 +21,7 @@ public class Ejercicio1Bloque3Capitulo3 {
 			else { 
 				numero = 0;
 				System.out.println("acabó");
+				return;
 				
 			}
 		}

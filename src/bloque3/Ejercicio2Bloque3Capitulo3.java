@@ -17,7 +17,10 @@ public class Ejercicio2Bloque3Capitulo3 {
 			
 			if (numero > 0 ) {
 				suma += numero; // suma números positivos
-				
+			}
+			else { 
+				if (numero == 0); // finalizar programa en 0
+				return;
 			}
 		}
 		media = (float) suma/numUsuario; // operación de la media
