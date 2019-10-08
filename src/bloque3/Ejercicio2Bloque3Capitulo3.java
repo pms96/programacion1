@@ -20,7 +20,7 @@ public class Ejercicio2Bloque3Capitulo3 {
 			}
 			else { 
 				if (numero == 0); // finalizar programa en 0
-				return;
+				break;
 			}
 		}
 		media = (float) suma/numUsuario; // operación de la media

@@ -10,7 +10,7 @@ public class Ejercicio2Bloque2Capitulo3 {
 		int numUsuario = Integer.parseInt(JOptionPane.showInputDialog("introduce la cantidad de números que quieras que tenga tu lista")); 
 		
 	    for (int i = 1; i <= numUsuario; i++) {
-	        num = Integer.parseInt(JOptionPane.showInputDialog("introduzca un número?"));
+	        num = Integer.parseInt(JOptionPane.showInputDialog("introduzca un número"));
 	        if (min != 0 && max != 0) {
 	            if (num > max) {
 	                max = num;

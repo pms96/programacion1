@@ -14,10 +14,9 @@ public class Ejercicio4Bloque2Capitulo3 {
 			int resultado = i * factor;
 			System.out.println( i + " x " + factor + " = " + resultado);
 			
-			if (resultado >=100) {
-				System.out.println("Fin");
 			}
+			
 		}
 	}
 
-}
+
