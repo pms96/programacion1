@@ -14,7 +14,7 @@ public class Ejercicio3Bloque3Capitulo3 {
 	        if (i == 0)
 	        	min = num;
 	        else {
-	            if (num < min) {
+	            if (num < min && num !=0) {
 	                min = num;
 	         
 		        }
