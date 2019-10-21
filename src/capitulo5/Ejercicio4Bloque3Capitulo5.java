@@ -8,8 +8,8 @@ public class Ejercicio4Bloque3Capitulo5 {
 		int numeros[] = new int[150];
 		int i = 0, sumaPares = 0, sumaImpares = 0; 
 
-		// Inicializaci�n de los valores del array
-		for ( i = 0; i < numeros.length; i++) {
+	for ( i = 0; i < numeros.length; i++) {
+			// Inicializaci�n de los valores del array
 			numeros[i] = i + 1;
 			numeros [i] = (int) Math.round(Math.random() * 100);
 			System.out.println(i + ": " + numeros[i]);
