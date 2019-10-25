@@ -1,58 +1,60 @@
 package capitulo5;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 import javax.swing.JOptionPane;
 
 public class Utils {
 
-	public static void main(String[] args) {
-
-	}
-
-	/**
-	 * 
-	 * @param limiteSuperior
-	 * @param limiteInferior
-	 * @return
-	 */
-	public static int obtenerNumerosAleatorios (int limiteSuperior, int limiteInferior) {
-		int rango = limiteSuperior - limiteInferior;
-		int numeroAzar = (int) Math.round(Math.random() * rango + limiteInferior);
-		return numeroAzar; 
+	
+	public static int obtenerNumeroAzar () {
+		 return (int) Math.round(Math.random() * 100);
 	}
 	
-	/**
-	 * 
-	 * @param longitud
-	 * @param limInf
-	 * @param limSup
-	 * @return
-	 */
-	public static int[] crearUnArrayNumerosAzar( int longitud, int limInf, int limSup) {
-		int array [] = new int [longitud];
-		for (int i = 0; i < array.length; i++) {
-			array [i] = obtenerNumerosAleatorios (limInf, limSup);
-		}
-		return array;
+	public static int obtenerNumeroAzar (int min, int max) {
+		 return (int) Math.round(Math.random() * (max - min)) + min;
 	}
+	 
+	public static void main (String args[]) {
+		System.out.print(obtenerNumeroAzar (-2, 5));
+	}
+	
+	
+	
+	
+	public static int obtenerEntero () {
+		int numero = 0;
+		try {
+			InputStreamReader isr = new InputStreamReader(System.in);
+			BufferedReader br = new BufferedReader (isr);
+			numero = Integer.parseInt (br.readLine());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return numero;
+	}
+
+
 	
 	/**
 	 * 
 	 * @return
 	 */
 	public static int obtenerNumUsuario () {
-		int num = obtenerNumUsuario ( "Introduce un numero: ");
+		int num = obtenerNumUsuario("Introduzca n�mero");
 		return num;
 	}
-	
 	/**
 	 * 
 	 * @param mensaje
 	 * @return
 	 */
 	public static int obtenerNumUsuario (String mensaje) {
-		int num = obtenerNumUsuario ( mensaje, -2147483648, 2147483647);
+		int num = obtenerNumUsuario(mensaje, -2147483648, 2147483647);
 		return num;
 	}
+	
 	
 	/**
 	 * 
@@ -65,13 +67,15 @@ public class Utils {
 		int num;
 		String mensajeError = "";
 		do {
-			num = Integer.parseInt(JOptionPane.showInputDialog(mensajeError + mensaje ));
+			num = Integer.parseInt(JOptionPane.showInputDialog(mensajeError + mensaje));
 			if (num < minimo || num > maximo) {
-				mensajeError = "El numero debe de estar entre: " + minimo + " y " + maximo;
+				mensajeError = "El n�mero debe estar entre " + minimo + " y " + maximo + " - ";
 			}
-		} while(num < minimo || num > maximo ) ;
+		} while (num < minimo || num > maximo);
 		return num;
 	}
 
-}
 
+
+
+}
